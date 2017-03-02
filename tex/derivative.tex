@@ -1,0 +1,311 @@
+\section{Differentiation}
+\begin{frame}{Definition of derivative}
+
+
+Derivative is defined as the limit of difference quotient,
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}f\left(x\right)=f'\left(x\right)=\lim_{\Delta x\to0}\frac{f\left(x+\Delta x\right)-f\left(x\right)}{\Delta x}\,.
+\]
+
+\begin{onlyenv}<2-4>
+
+\begin{itemize}
+\item The difference quotient is the slope of \uncover<3-4>{secant line}.
+\item Its limit, the derivative, is the slope of \uncover<4>{tangent line}.
+\end{itemize}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<5-7>
+
+\begin{itemize}
+\item The difference quotient is the \uncover<6-7>{average} rate of change.
+\item Its limit, the derivative, is the \uncover<7>{instantaneous} rate
+of change.
+\end{itemize}
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Derivatives of basic functions}
+
+\begin{onlyenv}<1>
+
+
+Derivative of $\tan(x)$, $a^{x}$, $\arcsin(x)$, $\arccos(x)$,
+$\arctan(x)$.
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+If $y=\left(x^{2}+x\right)\cdot\sin x$, find $y'\left(\frac{\pi}{2}\right)$
+and $y''\left(\frac{\pi}{2}\right)$.
+\end{example}
+
+
+
+\begin{example}
+If $f\left(v\right)=\frac{2v}{1-2v^{2}}$, find $f'\left(v\right)$.
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Chain rule}
+
+\begin{example}
+If $f\left(x\right)=\left(3x+2\right)^{5}$, then find $f'\left(x\right)$.
+\end{example}
+
+
+
+\begin{example}
+If $f\left(x\right)=\frac{5}{\sqrt{\left(1-x^{2}\right)^{3}}}$, find
+$f'\left(x\right)$.
+\end{example}
+
+
+
+\begin{example}
+p181-75
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Differentiability and continuity}
+
+
+Differentiability implies continuity,
+
+
+but continuity does not imply differentiability.
+
+
+Think about the graph of $\left|x\right|$ and $x^{1/3}$.
+
+
+\pause{}
+\begin{example}
+p182-10
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Estimating a derivative}
+
+\begin{example}
+Numerically, p153-39,40
+\end{example}
+
+
+\pause{}
+\begin{example}
+Graphically, p142-24, p180-68
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Derivatives of parametric curves}
+
+\begin{onlyenv}<1>
+
+
+\[
+\frac{\mathrm{dy}}{\mathrm{d}x}=\frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}
+\]
+\[
+\frac{\mathrm{d}^{2}y}{\mathrm{d}x^{2}}=\frac{\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\frac{\mathrm{d}x}{\mathrm{d}t}}
+\]
+
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+Find the equation of the tangent to the curve given by
+\[
+\begin{cases}
+x=2\sin\theta\\
+y=\cos2\theta
+\end{cases}
+\]
+for $\theta=\frac{\pi}{6}$.
+
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Implicit differentiation}
+
+
+\alert{Just remember, every thing in the equation is a function of independent
+variable. That means you need apply Product, Quotient and Chain rule
+to them.}
+\begin{example}
+Find the derivative $y'$ and $y''$ for
+\[
+x^{2}-2xy+3y^{2}=2
+\]
+and
+\[
+x\sin y=\cos\left(x+y\right)
+\]
+
+
+
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Derivative of the inverse of a function}
+
+\begin{onlyenv}<1>
+
+
+If a function $y=f\left(x\right)$ has its inverse $x=f^{-1}\left(y\right)$.
+Then
+\begin{eqnarray*}
+f^{-1}\left(f\left(x\right)\right) & = & x\\
+\frac{\mathrm{d}}{\mathrm{d}y}f^{-1}\left(y\right)\bigg|_{y=f\left(x\right)}\cdot\frac{\mathrm{d}}{\mathrm{d}x}f\left(x\right) & = & 1\\
+\frac{\mathrm{d}}{\mathrm{d}y}f^{-1}\left(y\right)\bigg|_{y=f\left(x\right)} & = & \frac{1}{\frac{\mathrm{d}}{\mathrm{d}x}f\left(x\right)}\,.
+\end{eqnarray*}
+
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2,3>
+
+\begin{example}
+If $f\left(3\right)=8$ and $f'\left(3\right)=5$, what do we know
+about $f^{-1}$?\end{example}
+
+\begin{uncoverenv}<3>
+
+\begin{sol}
+First, $f^{-1}\left(8\right)=3$.
+
+\[
+\frac{\mathrm{d}}{\mathrm{d}y}f^{-1}\bigg|_{y=8}=\frac{1}{\frac{\mathrm{d}}{\mathrm{d}x}f\bigg|_{x=3}}=\frac{1}{5}\,.
+\]
+
+\end{sol}
+\end{uncoverenv}
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<4>
+
+\begin{example}
+Let $y=f\left(x\right)=x^{3}+x-2$, and let $g$ be the inverse function.
+Evaluate $g'\left(0\right)$.
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{The mean value theorem (differentiation)}
+
+\begin{onlyenv}<1>
+
+
+\[
+\frac{f\left(b\right)-f\left(a\right)}{b-a}=f'\left(c\right)\mbox{ for some }c\in\left(a,b\right)\,.
+\]
+Verbally, the \alert{average rate of change} of some function $f$
+on some interval 
+
+
+equals the \alert{instantaneous rate of change} at some point in
+that interval.
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+You left home one morning and drove to a cousin's house $300$ miles
+away, arriving $6$ hours later. What does the mean value theorem
+say about your speed along the way?
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{l'Hôspital's rule}
+
+\begin{onlyenv}<1>
+
+\begin{enumerate}
+\item First, the expression must be an indeterminate form.
+\item Find derivatives of the denominator and numerator.
+\item Compute the limit of quotient of derivatives.
+
+\begin{enumerate}
+\item If the limit exists or equals $\infty$, then it is the value of the
+original limit;
+\item if the limit does not exist, then we cannot get a conclusion;
+\item if the it is still an indeterminate form, repeat step 2.
+\end{enumerate}
+\end{enumerate}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+$\lim_{x\to-2}\frac{x^{3}+8}{x^{2}-4}$
+\end{example}
+
+
+
+\begin{example}
+$\lim_{x\to2}\frac{x^{3}+8}{x^{2}+4}$
+\end{example}
+
+
+
+\begin{example}
+$\lim_{x\to\infty}x\sin\frac{1}{x}$
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Recognize a given limit as a derivative}
+
+\begin{example}
+$\lim_{h\to0}\frac{\left(2+h\right)^{4}-2^{4}}{h}$
+\end{example}
+
+
+
+\begin{example}
+$\lim_{h\to0}\frac{1}{h}\left(\frac{1}{2+h}-\frac{1}{2}\right)$
+\end{example}
+
+\end{frame}
+
+
+

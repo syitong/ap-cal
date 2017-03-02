@@ -1,0 +1,85 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\RequirePackage{fix-cm}
+\documentclass[english,envcountsect]{beamer}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+  \newenvironment{sol}{\begin{proof}[Solution.]\renewcommand{\qedsymbol}{}}{\end{proof}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{graphicx}
+%\usepackage{mathabx}
+%\newref{prop}{refcmd = {proposition \ref{#1}}}
+%\newref{le}{refcmd = {lemma \ref{#1}}}
+%\newref{def}{refcmd = {definition \ref{#1}}}
+\usetheme{Berkeley}
+\usecolortheme{wolverine}
+\setbeamertemplate{section in toc}{\hspace*{1em}{\color{structure}\rule[0.5ex]{4pt}{4pt}}~\inserttocsection}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}{\color{structure}\rule[0.5ex]{4pt}{4pt}}~\inserttocsubsection\par}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\setbeamertemplate{theorems}[numbered]
+%\includeonlylecture{test2}
+\AtBeginSection{
+\begin{frame}{\insertsection}
+\origtableofcontents[currentsection]
+\end{frame}}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\tikzset{
+    invisible/.style={opacity=0},
+    visible on/.style={alt={#1{}{invisible}}},
+    alt/.code args={<#1>#2#3}{%
+      \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+    },
+  }
+%This for step by step unvealing objects in tikz picture.
+%You only need to add "visible on = <1->" in the options of that object. Notice that if you want something to show on the page 1,3, you need use <{1,3}>
+
+
+\title{AP Review\thanks{All the page numbers are refered to the calculus textbook by Anton
+Bivens and Davis.}}
+
+
+\author[Y. Sun]{Yitong Sun}
+
+
+\institute[UofM]{University of Michigan}
+
+\makebeamertitle
+
+\include{derivative}
+\include{appdiff}
+
+
+
+\end{document}

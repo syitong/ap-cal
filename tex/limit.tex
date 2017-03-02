@@ -1,0 +1,203 @@
+\section[Limits]{Limits and Continuity}
+\begin{frame}{Basic limits}
+
+
+\[
+\lim_{x\to\infty}\frac{1}{x}=\quad,\lim_{x\to0-}\frac{1}{x}=\quad,\lim_{x\to0}\frac{\sin x}{x}=\quad
+\]
+\[
+\lim_{x\to0+}\left(1+x\right)^{1/x}=\quad,\lim_{x\to\infty}\arctan x=\quad\lim_{x\to\infty}e^{-x}=
+\]
+
+\begin{example}
+p128-4
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Limits laws}
+
+
+\[
+\lim_{x\to0+}\left[\left(1+x\right)^{1/x}+\frac{\sin x}{x}\right]=
+\]
+\[
+\lim_{x\to\infty}\left(\frac{2}{x}-\frac{1}{x^{2}}\right)=
+\]
+\[
+\lim_{x\to0}\frac{x}{x}=
+\]
+
+
+\end{frame}
+
+\begin{frame}{Limits of continuous functions}
+
+\begin{onlyenv}<1>
+
+
+If $f$ is continuous,
+\[
+\lim_{x\to2}f\left(x\right)=
+\]
+\[
+\lim_{x\to\infty}f\left(\frac{1}{x}\right)=
+\]
+
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+p128-1(a),(h),
+\[
+\lim_{x\to\infty}f\left(\frac{3x}{x-1}\right)\,,\lim_{x\to0}f\left(\frac{3x}{x}\right)\,.
+\]
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Squeeze theorem}
+
+
+For $f\left(x\right)=x^{2}\sin x$, $-x^{2}\le f\left(x\right)\le x^{2}$,
+because
+\[
+\lim_{x\to0}-x^{2}=\lim_{x\to0}x^{2}=0
+\]
+So
+\[
+\lim_{x\to0}x^{2}\sin x=0\,.
+\]
+
+
+\end{frame}
+
+\begin{frame}{More techniques}
+
+\begin{onlyenv}<1>
+
+\begin{itemize}
+\item For rational functions $\frac{P\left(x\right)}{Q\left(x\right)}$
+
+\begin{enumerate}
+\item Find out the highest leading term among $P\left(x\right)$ and $Q\left(x\right)$;
+\item Divide $P\left(x\right)$ and $Q\left(x\right)$ by the leading term;
+\item Evaluate the limit.
+\end{enumerate}
+\end{itemize}
+\begin{example}
+\[
+\lim_{x\to\infty}\frac{3-x}{4+x+x^{2}}
+\]
+\[
+\lim_{x\to-\infty}\frac{4+x^{2}-3x^{3}}{x+7x^{3}}
+\]
+
+
+
+\end{example}
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{itemize}
+\item For $\frac{\sin mx}{nx}$
+
+\begin{enumerate}
+\item Transform
+\[
+\frac{\sin mx}{nx}\longrightarrow\frac{\sin mx}{mx}\cdot\frac{mx}{nx}\,;
+\]
+
+\item Use the fact to evaluate
+\[
+\frac{\sin mx}{mx}\,;
+\]
+
+\item Use limit laws to obtain final result.
+\end{enumerate}
+\end{itemize}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<3>
+
+\begin{itemize}
+\item $\left(1+mx\right)^{1/nx}$ related
+
+\begin{enumerate}
+\item Find appropriate transformation so that ``$\square$'' represent
+the same thing in the expression $\left(1+\square\right)^{1/\square}$.
+For example,
+\[
+\left(1+mx\right)^{1/nx}\longrightarrow\left[\left(1+mx\right)^{1/mx}\right]^{m/n}
+\]
+
+\item Then use the fact
+\[
+\lim_{\square\to0}\left(1+\square\right)^{1/\square}=e\,.
+\]
+
+\end{enumerate}
+\end{itemize}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<4>
+
+\begin{itemize}
+\item Recognized as a derivative
+\item l'Hospital's rule
+\end{itemize}
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Continuity}
+
+\begin{onlyenv}<1>
+
+\begin{itemize}
+\item Definition
+\[
+\lim_{x\to a-}f\left(x\right)=\lim_{x\to a+}f\left(x\right)=f\left(a\right)
+\]
+
+\item Terms: removable, jump, infinity discontinuity
+\item Properties: Extreme value theorem, Intermediate value theorem
+\item \alert{All the elementary functions and their combination and composition
+are continuous in their domain!}
+\item Be careful about such expression
+\[
+\frac{x^{2}-1}{x+1}\,.
+\]
+
+\end{itemize}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+p118-5, 6
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+
+

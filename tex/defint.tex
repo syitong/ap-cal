@@ -1,0 +1,256 @@
+\section[DefInt]{Definite Integrals}
+\begin{frame}{Properties of definite integrals}
+
+\begin{itemize}
+\item 
+\[
+\int_{a}^{c}f\left(x\right)\,\mathrm{d}x+\int_{c}^{b}f\left(x\right)\,\mathrm{d}x=\int_{a}^{b}f\left(x\right)\,\mathrm{d}x
+\]
+
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item 
+\[
+\int_{a}^{b}f\left(x\right)\,\mathrm{d}x=-\int_{b}^{a}f\left(x\right)\,\mathrm{d}x
+\]
+
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item If $f\left(x\right)\le g\left(x\right)$ for all $x\in\left[a,b\right]$,
+then
+\[
+\int_{a}^{b}f\left(x\right)\,\mathrm{d}x\le\int_{a}^{b}g\left(x\right)\,\mathrm{d}x\,.
+\]
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamental theorem of calculus}
+
+
+\[
+\int_{a}^{b}f\left(x\right)\,\mathrm{d}x=F\left(b\right)-F\left(a\right)
+\]
+where $F$ is the antiderivative of $f$. Or
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\int_{a}^{x}f\left(t\right)\,\mathrm{d}t=f\left(x\right)\,.
+\]
+
+
+
+\pause{}
+
+
+Verbally, FTC says that integration and differentiation are two reverse
+processes for a function.
+
+\end{frame}
+
+\begin{frame}{Evaluate definite integrals}
+
+\begin{onlyenv}<1-2>
+
+\begin{example}
+\[
+\int_{-1}^{2}\left(3x^{2}-2x\right)\,\mathrm{d}x
+\]
+\end{example}
+
+\begin{uncoverenv}<2>
+
+\begin{sol}
+\begin{eqnarray*}
+\int_{-1}^{2}\left(3x^{2}-2x\right)\,\mathrm{d}x & = & \left(x^{3}-x^{2}\right)\big|_{-1}^{2}\\
+ & = & 6\,.
+\end{eqnarray*}
+
+\end{sol}
+\end{uncoverenv}
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<3-5>
+
+\begin{example}
+\[
+\int_{5}^{8}\frac{\mathrm{d}y}{\sqrt{9-y}}
+\]
+\end{example}
+
+\begin{onlyenv}<4>
+
+\begin{sol}
+{\scriptsize{}
+\begin{eqnarray*}
+\int_{5}^{8}\frac{\mathrm{d}y}{\sqrt{9-y}} & = & -\int_{5}^{8}\left(9-y\right)^{-\frac{1}{2}}\left(-1\right)\,\mathrm{d}y\\
+ & = & -\int_{5}^{8}\left(9-y\right)^{-\frac{1}{2}}\,\mathrm{d}\left(9-y\right)\\
+ & = & -2\left(9-y\right)^{\frac{1}{2}}\bigg|_{5}^{8}\\
+ & = & 2
+\end{eqnarray*}
+}{\scriptsize \par}
+\end{sol}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<5>
+
+\begin{sol}
+{\scriptsize{}
+\begin{eqnarray*}
+\int_{5}^{8}\frac{\mathrm{d}y}{\sqrt{9-y}} & = & -\int_{5}^{8}\left(9-y\right)^{-\frac{1}{2}}\left(-1\right)\,\mathrm{d}y\\
+ & = & -\int_{5}^{8}\left(9-y\right)^{-\frac{1}{2}}\,\mathrm{d}\left(9-y\right)\\
+ & = & -\int_{9-5}^{9-8}u^{-\frac{1}{2}}\,\mathrm{d}u\\
+ & = & -2u^{\frac{1}{2}}\bigg|_{4}^{1}
+\end{eqnarray*}
+}{\scriptsize \par}
+\end{sol}
+\end{onlyenv}
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<6-7>
+
+\begin{example}
+\[
+\int_{0}^{1}e^{x}x\,\mathrm{d}x
+\]
+\end{example}
+
+\begin{uncoverenv}<7>
+
+\begin{sol}
+{\scriptsize{}
+\begin{eqnarray*}
+\int_{0}^{1}e^{x}x\,\mathrm{d}x & = & \int_{0}^{1}x\,\mathrm{d}e^{x}\\
+ & = & xe^{x}\bigg|_{0}^{1}-\int_{0}^{1}e^{x}\,\mathrm{d}x\\
+ & = & e-0-\left(e-1\right)\\
+ & = & 1
+\end{eqnarray*}
+}{\scriptsize \par}
+\end{sol}
+\end{uncoverenv}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Represent functions using definite integral}
+
+\begin{example}
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\int_{-1}^{x}\sqrt{1+\sin^{2}t}\,\mathrm{d}t\,,\frac{\mathrm{d}}{\mathrm{d}x}\int_{x}^{1}e^{-t^{2}}\,\mathrm{d}t
+\]
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\int_{1}^{x}\frac{\mathrm{d}t}{3+t}
+\]
+
+\end{example}
+
+
+
+\begin{example}
+Find 
+\[
+\lim_{h\to0}\frac{1}{h}\int_{x}^{x+h}\sqrt{e^{t}-1}\,\mathrm{d}t\,.
+\]
+
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Integrals involving parametrically defined functions}
+
+\begin{example}
+Evaluate $\int_{-2}^{2}y\,\mathrm{d}x$, where $x=2\sin\theta$, $y=3\cos\theta$.
+\end{example}
+
+
+\pause{}
+\begin{example}
+Sketch the curve given by $x=t-\sin t$, $y=1-\cos t$. Find out the
+area between the curve and $x$-axis for one period.
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Riemann sum and approximation}
+
+\begin{onlyenv}<1>
+
+
+\[
+\lim_{n\to\infty}\sum_{k=1}^{n}f\left(x_{k}\right)\Delta x_{k}=\int_{a}^{b}f\left(x\right)\,\mathrm{d}x\,.
+\]
+\[
+\sum_{k=1}^{n}f\left(x_{k}\right)\Delta x_{k}\approx\int_{a}^{b}f\left(x\right)\,\mathrm{d}x\,.
+\]
+
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+Approximate $\int_{0}^{2}x^{3}\,\mathrm{d}x$ by using four subintervals
+of equal width and calculating:
+\begin{enumerate}
+\item the left sum,
+\item the right sum,
+\item the midpoint sum,
+\item the trapezoidal sum,
+\item the integral.
+\end{enumerate}
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Average value of a function}
+
+
+\[
+\frac{1}{b-a}\int_{a}^{b}f\left(x\right)\,\mathrm{d}x
+\]
+The average value of a \alert{continuous} function equals the value
+of the function at some point $c$ within the interval $\left(a,b\right)$.
+\begin{example}
+Find the average value of $y=\ln x$ on the interval $\left[1,4\right]$.
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Application of these techniques}
+
+\begin{example}
+p264 Example 28.
+\end{example}
+
+
+
+\begin{example}
+p266 Example 29.
+\end{example}
+
+
+
+\begin{example}
+p275 Example 41.
+\end{example}
+
+\end{frame}
+
+
+

@@ -1,0 +1,199 @@
+\section[IndefInt]{Indefinite Integral}
+\begin{frame}{Antiderivative/indefinite integral}
+
+
+\[
+\int f\left(x\right)\,\mathrm{d}x
+\]
+
+
+
+\pause{}
+\begin{itemize}
+\item antiderivative/indefinite integral of $f\left(x\right)$ is the function
+whose derivative is $f\left(x\right)$.
+\item For each function $f\left(x\right)$, its antiderivative is not unique.
+\alert{Always remember to add $C$}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Basic formulas}
+
+
+Remember all the formulas on p217 except for 13, 14, 17, 18, 19
+\begin{example}
+\[
+\int\left(x^{4}+\sqrt[3]{x^{2}}-\frac{2}{x^{2}}-\frac{1}{3\sqrt[3]{x}}\right)\,\mathrm{d}x
+\]
+
+\end{example}
+
+\end{frame}
+
+\begin{frame}{Substitution rule}
+
+\begin{onlyenv}<1>
+
+
+If you have an integral of the form
+\[
+\int F\left(f\left(x\right)\right)f'\left(x\right)\,\mathrm{d}x
+\]
+then it equals
+\[
+\int F\left(u\right)\,\mathrm{d}u
+\]
+where $u=f\left(x\right)$.
+
+
+Or you can consider that whenever a function passes through the differentiation
+sign $\mathrm{d}$ from left to right, it becomes its antiderivative,
+and when it passes from right to left, it becomes its derivative.
+And everything after $\mathrm{d}$ can be viewed as a whole part.
+
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+{\footnotesize{}
+\[
+\int\left(1-x^{2}\right)x\,\mathrm{d}x
+\]
+}{\footnotesize \par}
+\end{example}
+
+
+\pause{}
+\begin{sol}
+{\tiny{}
+\begin{eqnarray*}
+\int\left(1-x^{2}\right)x\,\mathrm{d}x & = & -\frac{1}{2}\int\left(1-x^{2}\right)\left(-2x\right)\,\mathrm{d}x\quad\boxed{u=1-x^{2}\,,u'=-2x}\\
+ & = & -\frac{1}{2}\int u\cdot u'\,\mathrm{d}x\\
+ & = & -\frac{1}{2}\int u\,\mathrm{d}u\\
+ & = & -\frac{1}{2}\cdot\frac{1}{2}u^{2}\\
+ & = & -\frac{1}{4}\left(1-x^{2}\right)^{2}\,.
+\end{eqnarray*}
+}{\tiny \par}
+\end{sol}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<3>
+
+\begin{example}
+\[
+\int\left(2x^{3}-1\right)^{5}x^{2}\,\mathrm{d}x\,,\int\sqrt[3]{1-x}\,\mathrm{d}x\,,\int\frac{e^{x}}{1-2e^{x}}\,\mathrm{d}x
+\]
+\[
+\int\sin\left(1-2y\right)\,\mathrm{d}y\,,\int e^{\tan y}\sec^{2}y\,\mathrm{d}y\,,\int\frac{\cos\sqrt{x}}{\sqrt{x}}\,\mathrm{d}x
+\]
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Integration by partial fractions}
+
+\begin{onlyenv}<1>
+
+\begin{enumerate}
+\item Polynomial division;
+\item Denominator factorization;
+\item Determine coefficients;
+\item Use \alert{substitution} and rule for $\frac{1}{x}$ to integrate.
+\end{enumerate}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<2>
+
+\begin{example}
+\[
+\int\frac{x^{2}-x+4}{x^{3}-3x^{2}+2x}\,\mathrm{d}x
+\]
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Integration by parts}
+
+
+\begin{eqnarray*}
+\int f\left(x\right)g'\left(x\right)\,\mathrm{d}x & = & \int f\left(x\right)\,\mathrm{d}g\left(x\right)\\
+ & = & f\left(x\right)g\left(x\right)-\int g\left(x\right)\,\mathrm{d}f\left(x\right)\\
+ & = & f\left(x\right)g\left(x\right)-\int g\left(x\right)f'\left(x\right)\,\mathrm{d}x\,.
+\end{eqnarray*}
+
+
+
+\pause{}
+\begin{example}
+\[
+\int x\cos x\,\mathrm{d}x\,,\int e^{x}\cos x\,,\int x^{4}\ln x\,\mathrm{d}x
+\]
+
+\end{example}
+
+
+\pause{}
+
+
+What can you conclude?
+
+\end{frame}
+
+\begin{frame}{Application of indefinite integral}
+
+\begin{onlyenv}<1-2>
+
+\begin{example}
+The velocity of a particle moving along a line is given by $v\left(t\right)=4t^{3}-3t^{2}$
+at time $t$. If the particle is initially at $x=3$ on the line,
+find its position when $t=2$.
+\end{example}
+
+
+\pause{}
+\begin{sol}
+\[
+s\left(t\right)=\int v\left(t\right)\,\mathrm{d}t
+\]
+\[
+s\left(0\right)=3
+\]
+
+\end{sol}
+\end{onlyenv}
+
+
+
+\begin{onlyenv}<3>
+
+\begin{example}
+Suppose that $a\left(t\right)$, the acceleration of a particle at
+time $t$, is given by $a\left(t\right)=4t-3$, that $v\left(1\right)=6$,
+and that $f\left(2\right)=5$, where $f\left(t\right)$ is the position
+function.
+\begin{enumerate}
+\item Find $v\left(t\right)$ and $f\left(t\right)$;
+\item Find the position of the particle when $t=1$.
+\end{enumerate}
+
+\end{example}
+
+\end{onlyenv}
+
+\end{frame}
+
+
+
